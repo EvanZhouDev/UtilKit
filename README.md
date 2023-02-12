@@ -97,3 +97,41 @@ obj.length // Undefined
 len([1,2,3]) === [1,2,3].length // Still works the same!
 ```
 
+### Trigonometric Functions
+The built-in trig function are pretty simple; they take in the angle in radian and gives you the corresponding value. However, upon plugging in some common values in terms of `Math.PI`, you will notice a problem: there are some floating point errors.
+The UtilKit functions fix this.
+
+#### Usage:
+Make sure that the pi approximation you use is `Math.PI` specifically. Other approximations may not work.
+```javascript
+let PI = Math.PI
+sin(PI) // 0
+Math.sin(PI) // 1.2246467991473532e-16 (VERY close to 0, but not 0?)
+
+cos(PI/2) // 1
+Math.cos(PI/2) // 6.123233995736766e-17 (Similar problem)
+
+tan(PI/2) // Error
+Math.tan(PI/2) // 16331239353195370 (There is no tangent of 90°)
+```
+Many floating point errors have been fixed, including tangent of 90° etc.
+
+### `Reverse` and `Reversed`
+Reversing anything that isn't a array in JS is a pain.
+For an array, you can do `Array.reverse()`. For a string, you have to do `String.split("").reverse().join("")`. UtilKit fixes this.
+
+#### Usage:
+Reverse and reversed do essentially the same thing for everything that isn't an array (because arrays pass by reference and everything else passes by value).
+`reverse` mutates the array, and `reversed` doesn't.
+```javascript
+let myArr = [1,2,3]
+reverse(myArr) // [3,2,1]
+myArr // [3,2,1]
+
+let myArr2 = [1,2,3]
+reversed(myArr) // [3,2,1]
+myArr // [1,2,3]
+
+reverse("hello") // "olleh"
+reverse(123.4) // 4.321
+```
