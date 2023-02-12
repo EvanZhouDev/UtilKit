@@ -1,12 +1,10 @@
 {
-	"name": "jsutils",
+	"name": "utilkit",
 	"version": "0.0.1",
 	"description": "A set of lightweight JS utilities",
-	"main": "jsutils.js",
+	"main": "utilkit.js",
 	"scripts": {
-		"test": "jest",
-		"testv": "jest --verbose",
-		"testme": "node testfile.js"
+		"test": "jest --verbose"
 	},
 	"author": "",
 	"license": "MIT",
