@@ -1,6 +1,6 @@
 const chalk = require("chalk");
-require("./jsutils")();
-
+require("./utilkit")();
+console.log(chalk.blue("👋 Hi!").length)
 // console.log(chalk.blue("hi"));
 
 describe("Strings", () => {
