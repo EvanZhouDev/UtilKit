@@ -1,4 +1,4 @@
-require("./utilkit")();
+require("../utilkit")();
 
 describe("`reverse` Function", () => {
 	test("String", () => {
