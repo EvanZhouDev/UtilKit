@@ -1,7 +1,5 @@
 const chalk = require("chalk");
 require("./utilkit")();
-console.log(chalk.blue("👋 Hi!").length)
-// console.log(chalk.blue("hi"));
 
 describe("Strings", () => {
 	// Applies only to tests in this describe block
@@ -94,10 +92,3 @@ describe("Miscellaneous", () => {
 		});
 	});
 });
-
-// test("Testing length of emojis", () => {
-// 	expect(len("😀123")).toBe(4);
-// });
-// test("Testing length of emojis", () => {
-// 	expect(len("😀123")).toBe(4);
-// });
