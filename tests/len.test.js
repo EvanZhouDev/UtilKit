@@ -11,12 +11,20 @@ describe("Strings", () => {
 		expect(len("😀⌘123")).toBe(5);
 	});
 
+	test("Zalgo Text", () => {
+		expect(len("ż̴̠͚͓͎̒ä̷͔́͋͂l̴̘͇̺̯͂̀g̸̺͈̏̊̊͂o̴̩̖̒̓͋̕")).toBe(5);
+	});
+
 	test("Color Sequences/Escape Codes", () => {
 		expect(len(chalk.blue("Hello, World"))).toBe("Hello, World".length);
 	});
 
 	test("Emojis and Color Sequences", () => {
 		expect(len(chalk.blue("😀⌘123"))).toBe(5);
+	});
+
+	test("Zalgo, Emojis, Color Sequences", () => {
+		expect(len(chalk.blue("ż̴̠͚͓͎̒ä̷͔́͋͂l̴̘͇̺̯͂̀g̸̺͈̏̊̊͂o̴̩̖̒̓͋̕😀⌘123"))).toBe(10);
 	});
 });
 describe("Arrays", () => {
