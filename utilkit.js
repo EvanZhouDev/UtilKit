@@ -2,6 +2,7 @@ const len = (obj) => {
 	if (obj === null) throw new TypeError("null has no len()");
 	switch (typeof obj) {
 		case "string":
+			obj = obj.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 			return [
 				...obj.replace(
 					/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
@@ -17,6 +18,8 @@ const len = (obj) => {
 			throw new TypeError(`${typeof obj} has no len()`);
 	}
 };
+console.log("AHH", len("ż̴̠͚͓͎̒ä̷͔́͋͂l̴̘͇̺̯͂̀g̸̺͈̏̊̊͂o̴̩̖̒̓͋̕"));
+console.log("AHH", len("Æ"));
 
 const sin = (rad) => {
 	piCount = (rad / Math.PI) % 2;
