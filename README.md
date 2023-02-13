@@ -67,8 +67,8 @@ All the goodies in UtilKit bundle!
 
 ### Length
 The built-in length function has some problems, and, surprisingly, most major programming languages don't fix it.
-1. No escape code removal
-2. Counting based on bytes and not strict characters (e.g. emojis)
+The `len()` function is implemented so that the characters you see in a string is the length you get.
+There are also changes for objects!
 
 #### Usage:
 The usage is pretty simple:
