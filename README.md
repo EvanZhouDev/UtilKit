@@ -27,7 +27,7 @@ Internally, when you are requiring, it returns this callback for the `len()` fun
 (Assume that `len()` has already been implemented in this code, and that it takes in one `obj` parameter)
 ```javascript
 module.exports = function () {
-	this.len = (obj) => len(obj)
+    this.len = (obj) => len(obj)
 }
 ```
 The reason this works is that when in a local funciton, `node` allows any method in  `this` to be executed normally outside as a function.
