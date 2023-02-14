@@ -1,6 +1,6 @@
 {
 	"name": "utilkit-js",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A set of lightweight JS utilities",
 	"main": "utilkit.js",
 	"scripts": {
