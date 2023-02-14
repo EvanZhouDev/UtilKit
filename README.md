@@ -21,7 +21,7 @@ UtilKit usage is slightly different than most `node` modules.
 > This import section is out-of-date. I'm gonna fix it very soon!
 To use, put this at the top of your JS code:
 ```javascript
-require("utilkit")();
+require("utilkit-js")();
 ```
 Now, you can use all of the functions as if they were native functions:
 ```javascript
