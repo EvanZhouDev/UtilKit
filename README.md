@@ -2,10 +2,13 @@
 UtilKit is designed to make it simple to do things that JS makes complicated.
 Each function is chosen for a reason and designed specifically to make JS more pleasing to use.
 
+> **Warning**
+> This module is still in development, probably not a good idea to use it in production!
+
 ## Installation:
 It's pretty simple!
 ```bash
-npm install utilkit
+npm install utilkit-js
 ```
 
 ## Usage
@@ -14,6 +17,8 @@ UtilKit usage is slightly different than most `node` modules.
 > **Warning**
 > This module doesn't work with the `Bun` runtime as of now.
 
+
+> This import section is out-of-date. I'm gonna fix it very soon!
 To use, put this at the top of your JS code:
 ```javascript
 require("utilkit")();
