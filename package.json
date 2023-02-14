@@ -4,12 +4,20 @@
 	"description": "A set of lightweight JS utilities",
 	"main": "utilkit.js",
 	"scripts": {
-		"test": "jest --verbose"
+		"test": "jest --verbose",
+		"bundle": "tsup ./utilkit.js --format cjs,esm --minify"
+	},
+	"exports": {
+		".": {
+			"require": "./dist/utilkit.js",
+			"import": "./dist/utilkit.mjs"
+		}
 	},
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
 		"chalk": "^4.1.2",
-		"jest": "^29.4.2"
+		"jest": "^29.4.2",
+		"tsup": "^6.6.2"
 	}
 }

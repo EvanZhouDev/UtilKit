@@ -1,5 +1,5 @@
 const chalk = require("chalk");
-require("../utilkit")();
+require("../dist/utilkit")(global);
 
 describe("Strings", () => {
 	// Applies only to tests in this describe block

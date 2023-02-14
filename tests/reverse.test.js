@@ -1,5 +1,6 @@
-require("../utilkit")();
-
+require("../dist/utilkit")(global);
+// import requireMe from "../utilkit"
+// requireMe(global);
 describe("`reverse` Function", () => {
 	test("String", () => {
 		expect(reverse("Hello, World")).toBe("dlroW ,olleH");

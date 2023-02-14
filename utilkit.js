@@ -18,8 +18,6 @@ const len = (obj) => {
 			throw new TypeError(`${typeof obj} has no len()`);
 	}
 };
-console.log("AHH", len("ż̴̠͚͓͎̒ä̷͔́͋͂l̴̘͇̺̯͂̀g̸̺͈̏̊̊͂o̴̩̖̒̓͋̕"));
-console.log("AHH", len("Æ"));
 
 const sin = (rad) => {
 	piCount = (rad / Math.PI) % 2;
@@ -119,14 +117,23 @@ const reverse = (obj) => {
 // 	return [...arr].sort(compareFn);
 // };
 
-module.exports = function () {
-	this.len = (obj) => len(obj);
-	this.reverse = (obj) => reverse(obj);
-	this.reversed = (obj) => reversed(obj);
+module.exports = function (target) {
+	if (target === undefined)
+		return {
+			len: (obj) => len(obj),
+			reverse: (obj) => reverse(obj),
+			reversed: (obj) => reversed(obj),
+			sin: (rad) => sin(rad),
+			cos: (rad) => cos(rad),
+			tan: (rad) => tan(rad),
+		};
+	target.len = (obj) => len(obj);
+	target.reverse = (obj) => reverse(obj);
+	target.reversed = (obj) => reversed(obj);
 	// this.sort = (arr, compareFn = (a, b) => a - b) => sort(arr);
 	// this.sorted = (arr, compareFn = (a, b) => a - b) => sorted(arr);
-	this.sin = (rad) => sin(rad);
-	this.cos = (rad) => cos(rad);
-	this.tan = (rad) => tan(rad);
+	target.sin = (rad) => sin(rad);
+	target.cos = (rad) => cos(rad);
+	target.tan = (rad) => tan(rad);
 	//etc
 };

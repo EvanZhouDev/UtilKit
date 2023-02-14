@@ -1,4 +1,4 @@
-require("../utilkit")();
+require("../dist/utilkit")(global);
 let pi = Math.PI;
 describe("Trigonometric Functions", () => {
 	describe("`sin` Function", () => {
