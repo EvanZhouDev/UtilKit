@@ -5,7 +5,7 @@
 	"main": "utilkit.js",
 	"scripts": {
 		"test": "jest --verbose",
-		"bundle": "tsup ./utilkit.js --format cjs,esm --minify"
+		"bundle": "tsup ./utilkit.js --format cjs,esm --dts --minify"
 	},
 	"exports": {
 		".": {
