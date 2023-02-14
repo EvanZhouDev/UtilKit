@@ -91,32 +91,6 @@ const reverse = (obj) => {
 	return obj;
 };
 
-// const defaultSort = (a, b) => {
-// 	let res;
-// 	let curA = a,
-// 		curB = b;
-// 	if (typeof a === "number") {
-// 		curA = [a];
-// 	}
-// 	if (typeof b === "number") {
-// 		curB = [b];
-// 	}
-// 	if (typeof a !== "object" || typeof b !== "object") {
-// 		return a.toString().localeCompare(b.toString());
-// 	}
-// 	curA.flat().map((_, i) => {
-// 		res ||= curA[i] - curB[i];
-// 	});
-// 	return res;
-// };
-// const sort = (arr, compareFn = (a, b) => defaultSort(a, b)) => {
-// 	arr.sort(compareFn);
-// 	return arr;
-// };
-// const sorted = (arr, compareFn = (a, b) => defaultSort(a, b)) => {
-// 	return [...arr].sort(compareFn);
-// };
-
 module.exports = function (target) {
 	if (target === undefined)
 		return {
@@ -130,10 +104,7 @@ module.exports = function (target) {
 	target.len = (obj) => len(obj);
 	target.reverse = (obj) => reverse(obj);
 	target.reversed = (obj) => reversed(obj);
-	// this.sort = (arr, compareFn = (a, b) => a - b) => sort(arr);
-	// this.sorted = (arr, compareFn = (a, b) => a - b) => sorted(arr);
 	target.sin = (rad) => sin(rad);
 	target.cos = (rad) => cos(rad);
 	target.tan = (rad) => tan(rad);
-	//etc
 };
