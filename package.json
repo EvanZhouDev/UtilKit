@@ -3,6 +3,7 @@
 	"version": "0.0.3",
 	"description": "A set of lightweight JS utilities",
 	"main": "utilkit.js",
+	"types": "./dist/utilkit.d.ts",
 	"scripts": {
 		"test": "jest --verbose",
 		"bundle": "tsup ./utilkit.js --format cjs,esm --dts --minify"
