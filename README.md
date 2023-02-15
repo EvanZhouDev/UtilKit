@@ -26,16 +26,16 @@ There are two ways of usage
 2. Use UtilKit normally under a namespace
 
 Choose your installation here:
-* [ESM](#esm)
-	* [Expose Functions to Global](#expose-functions-to-global-for-esm)
-	* [Use Under Namespace](#use-under-namespace-for-esm)
 * [CJS](#cjs)
 	* [Expose Functions to Global](#expose-functions-to-global-for-cjs)
 	* [Use Under Namespace](#use-under-namespace-for-cjs)
+* [ESM](#esm)
+	* [Expose Functions to Global](#expose-functions-to-global-for-esm)
+	* [Use Under Namespace](#use-under-namespace-for-esm)
 * [Thoughts/Safety about injecting to global and how it works](#thoughts-and-safety-of-injecting-to-global)
 
-### ESM
-#### Expose Functions to Global for ESM
+### CJS
+#### Expose Functions to Global for CJS
 To use, put this at the top of your JS code:
 ```javascript
 require("utilkit-js")(global);
@@ -46,7 +46,7 @@ Now, you can use all of the functions as if they were native functions:
 console.log(len("Hello, world!")) // len() is a utilkit function
 ```
 
-#### Use Under Namespace for ESM
+#### Use Under Namespace for CJS
 To use, put this at the top of your JS code:
 ```javascript
 let utk = require("utilkit-js")();
@@ -57,8 +57,8 @@ Now, you can use all of the functions like a normal `node` module
 console.log(utk.len("Hello, world!"))
 ```
 
-### CJS
-#### Expose Functions to Global for CJS
+### ESM
+#### Expose Functions to Global for ESM
 To use, put this at the top of your JS code:
 ```javascript
 import utilkit from "utilkit-js"
@@ -70,7 +70,7 @@ Now, you can use all of the functions as if they were native functions:
 console.log(len("Hello, world!")) // len() is a utilkit function
 ```
 
-#### Use Under Namespace for CJS
+#### Use Under Namespace for ESM
 To use, put this at the top of your JS code:
 ```javascript
 import utilkit from "utilkit-js"
